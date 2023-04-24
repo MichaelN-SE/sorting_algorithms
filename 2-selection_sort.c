@@ -4,6 +4,8 @@
  * swap_int - sort two by swap
  * @a: first integer.
  * @b: second integer.
+ *
+ * Return: nothing
  */
 
 void swap_int(int *a,  int *b)
@@ -19,14 +21,16 @@ void swap_int(int *a,  int *b)
  * selection_sort - selection sorting of arrays
  * @array: arrays to sort
  * @size: size of arrays
+ *
+ * Retun: nothing
  */
 void selection_sort(int *array, size_t size)
 {
 	size_t i, j, min;
 
 	if (array  ==  NULL || size < 2)
-
 		return;
+
 	for (i =  0; i < size; i++)
 	{
 		min =  i;
