@@ -25,13 +25,13 @@ void swap(int  *array, int  i, int  j)
  * Return: index of pivot
  */
 
-int partition(int  *array, int  lb, int  ub, size_t size)
+int partition(int  *array, int  fe, int  le, size_t size)
 {
-	int i  =  lb - 1, j;
+	int i  =  fe - 1, j;
 
-	for (j  =  lb; j  <=  ub - 1; j++)
+	for (j  =  fe; j  <=  le - 1; j++)
 	{
-		if (array[j] < array[ub])
+		if (array[j] < array[le])
 		{
 			i++;
 			if (i < j)
@@ -41,9 +41,9 @@ int partition(int  *array, int  lb, int  ub, size_t size)
 			}
 		}
 	}
-	if (array[i + 1] > array[ub])
+	if (array[i + 1] > array[le])
 	{
-		swap(array, (i + 1), ub);
+		swap(array, (i + 1), le);
 		print_array(array, size);
 	}
 
@@ -53,20 +53,20 @@ int partition(int  *array, int  lb, int  ub, size_t size)
 /**
  * sort - sorting arrays recursion
  * @array: arrays
- * @lb: index of first element
- * @ub: index of last element
+ * @fe: index of first element
+ * @le: index of last element
  * @size: size of arrays
  */
 
-void sort(int *array, int lb, int ub, size_t size)
+void sort(int *array, int fe, int le, size_t size)
 {
 	int loc;
 
 	if (lb < ub)
 	{
-		loc = partition(array, lb, ub, size);
-		sort(array, lb, loc - 1, size);
-		sort(array, loc + 1, ub, size);
+		loc = partition(array, fe, le, size);
+		sort(array, fe, loc - 1, size);
+		sort(array, loc + 1, le, size);
 	}
 }
 
