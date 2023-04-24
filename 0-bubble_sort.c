@@ -6,7 +6,7 @@
  * @b: The second integer to swap.
  */
 
-void swap_ints(int *a, int *b)
+void swap_int(int *a, int *b)
 {
 	int tmp;
 
@@ -23,28 +23,25 @@ void swap_ints(int *a, int *b)
  * Description: Prints the array after each swap.
  */
 
-/*
-Time Complexity: O(n^2)
-*/
-
 void bubble_sort(int *array, size_t size)
 {
-	size_t i, len = size;
-	bool bubbly = false;
+	size_t i, len;
+	bool bubbl = false;
 
+	len = size;
 	if (array == NULL || size < 2)
 		return;
 
-	while (bubbly == false)
+	while (bubbl == false)
 	{
-		bubbly = true;
+		bubbl = true;
 		for (i = 0; i < len - 1; i++)
 		{
 			if (array[i] > array[i + 1])
 			{
-				swap_ints(array + i, array + i + 1);
+				swap_int(array + i, array + i + 1);
 				print_array(array, size);
-				bubbly = false;
+				bubbl = false;
 			}
 		}
 		len--;
