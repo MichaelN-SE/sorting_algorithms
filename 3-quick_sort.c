@@ -19,8 +19,8 @@ void swap(int  *array, int  i, int  j)
 /**
  * partition - partition array
  * @array: arrays to sort
- * @lb: first element index
- * @ub: last element index
+ * @fe: first element index
+ * @le: last element index
  * @size: arrays size
  * Return: index of pivot
  */
@@ -62,7 +62,7 @@ void sort(int *array, int fe, int le, size_t size)
 {
 	int loc;
 
-	if (lb < ub)
+	if (fe < le)
 	{
 		loc = partition(array, fe, le, size);
 		sort(array, fe, loc - 1, size);
@@ -71,7 +71,7 @@ void sort(int *array, int fe, int le, size_t size)
 }
 
 /**
- * quick_sort - sorts an array of integers using the Quick
+ * quick_sort - sorts an array of integers using the quick
  * sort algorithm in ascending order
  * @array: array to sort
  * @size: array size
