@@ -1,11 +1,12 @@
 #include "sort.h"
 
 /**
- * swap_node - swap two nodes
- * @temp: to swap
- * @list: pointer to first node
- * Return: pointer new pointer after the exchange
+ * swap_node - swap two nodes.
+ * @temp: to swap.
+ * @list: pointer to first node.
+ * Return: pointer new pointer after the exchange.
  */
+
 listint_t *swap_node(listint_t **list, listint_t *temp)
 {
 	listint_t *temp2;
@@ -28,6 +29,7 @@ listint_t *swap_node(listint_t **list, listint_t *temp)
  * cocktail_sort_list - sort linked list using cocktail sort method
  * @list: input linked list
  */
+
 void cocktail_sort_list(listint_t **list)
 {
 	listint_t *temp;
