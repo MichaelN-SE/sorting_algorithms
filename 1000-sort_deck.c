@@ -1,6 +1,5 @@
-include "deck.h"
+#include "deck.h"
 #include <stdio.h>
-
 /**
  *_strcmp - compare two strings
  *@str1: string
@@ -9,7 +8,6 @@ include "deck.h"
  */
 
 int _strcmp(const char *str1, char *str2)
-
 {
 	size_t i = 0;
 
@@ -31,7 +29,6 @@ int _strcmp(const char *str1, char *str2)
  * @node: represent the card
  * Return: return the card position
  */
-
 int get_card_position(deck_node_t *node)
 
 {
@@ -81,9 +78,9 @@ deck_node_t *swap_card(deck_node_t *card, deck_node_t **deck)
 }
 
 /**
- * insertion_sort_deck - function that sorts a doubly linked deck.
- * of integers in ascending order using the Insertion sort algorithm.
- * @deck: Dobule linked deck to sort.
+ * insertion_sort_deck - function that sorts a doubly linked deck
+ * of integers in ascending order using the Insertion sort algorithm
+ * @deck: Dobule linked deck to sort
  */
 
 void insertion_sort_deck(deck_node_t **deck)
@@ -114,12 +111,12 @@ void insertion_sort_deck(deck_node_t **deck)
 }
 
 /**
- * sort_deck - sort a deck you put in using.
- * insertion sort algorithm.
- * @deck: deck.
+ * sort_deck - sort a deck you put in using
+ * insertion sort algorithm
+ * @deck: deck
  */
-
 void sort_deck(deck_node_t **deck)
 {
 	insertion_sort_deck(deck);
 }
+
